@@ -228,24 +228,20 @@ lowest addresses and working our way up:
 - Program code and data.Code begins at the same fixed address for all processes,
 followed by data locations that correspond to global C variables. The code and
 data areas are initialized directly from the contents of an executable object file,
-in our case the hello executable. You will learn more about this part of the
-address space when we study linking and loading in Chapter 7.
+in our case the hello executable. 
 - Heap. The code and data areas are followed immediately by the run-time heap.
 Unlike the code and data areas, which are fixed in size once the process begins
 running, the heap expands and contracts dynamically at run time as a result
-of calls to C standard library routines such as malloc and free. We will study
-heaps in detail when we learn about managing virtual memory in Chapter 9.
+of calls to C standard library routines such as malloc and free. 
 - Shared libraries.Near the middle of the address space is an area that holds the
 code and data for shared libraries such as the C standard library and the math
 library. The notion of a shared library is a powerful but somewhat difficult
-concept. You will learn how they work when we study dynamic linking in
-Chapter 7.
+concept. 
 - Stack. At the top of the user’s virtual address space is the user stack that
 the compiler uses to implement function calls. Like the heap, the user stack
 expands and contracts dynamically during the execution of the program. In
 particular, each time we call a function, the stack grows. Each time we return
-from a function, it contracts. You will learn how the compiler uses the stack
-in Chapter 3.
+from a function, it contracts. 
 - Kernel virtual memory. The kernel is the part of the operating system that is
 always resident in memory. The top region of the address space is reserved for
 the kernel. Application programs are not allowed to read or write the contents
