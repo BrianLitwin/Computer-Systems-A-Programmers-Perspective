@@ -16,7 +16,7 @@ by a compiler driver.
 
 the gcc compiler driver reads the source file hello.c and translates it into
 an executable object file hello. The translation is performed in the sequence
-of four phases shown in Figure 1.3. The programs that perform the four phases
+of four phases. The programs that perform the four phases
 (preprocessor, compiler, assembler, and linker) are known collectively as the
 compilation system.
 - Preprocessing phase.The preprocessor (cpp) modifies the original C program
